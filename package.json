@@ -1,0 +1,16 @@
+{
+  "name": "uibakery-health-check",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run": "node ./index.js",
+    "start": "npm run start:local",
+    "start:local": "ENVIRONMENT=local npm run run",
+    "start:dev": "ENVIRONMENT=dev npm run run",
+    "deploy": "ENVIRONMENT=local firebase deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
