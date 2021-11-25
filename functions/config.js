@@ -28,7 +28,8 @@ function getConfig() {
     return localEnv;
   }
 
-  throw new Error(`No env specified. Please, choose one: prod, dev or local`);
+  // throw new Error(`No env specified. Please, choose one: prod, dev or local`);
+  return prodEnv;
 }
 
 exports.config = getConfig();

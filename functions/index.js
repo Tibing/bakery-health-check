@@ -44,11 +44,11 @@ async function tryLogin() {
     const ok = response.status === 200;
     const message = ok
       ? 'Всё хорошо. Могу залогиниться.'
-      : 'Всему пизда! Не могу залогиниться в прод!';
+      : 'Всё плохо! Не могу залогиниться в прод!';
 
     return { ok, message, data: response.data };
   } catch (e) {
-    return { ok: false, message: 'Всему пизда! Не могу залогиниться в прод!', data: { error: e.message } };
+    return { ok: false, message: 'Всё плохо! Не могу залогиниться в прод!', data: { error: e.message } };
   }
 }
 
@@ -61,11 +61,11 @@ async function tryGetProjects(loginResult) {
     const ok = response.status === 200;
     const message = ok
       ? 'Всё хорошо. Проекты грузятся.'
-      : 'Всему пизда! Проекты не грузятся!';
+      : 'Всё плохо! Проекты не грузятся!';
 
     return { ok, message, data: response.data };
   } catch (e) {
-    return { ok: false, message: 'Всему пизда! Проекты не грузятся!', data: { error: e.message } };
+    return { ok: false, message: 'Всё плохо! Проекты не грузятся!', data: { error: e.message } };
   }
 }
 
